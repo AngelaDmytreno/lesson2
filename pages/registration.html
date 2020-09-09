@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100;1,400;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="header__navbar">
+      <ul class="header__navbar-list">
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../index.html">Главная</a>
+        </li>
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../pages/article.html">Статьи</a>
+        </li>
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../pages/catalog.html">Каталог</a>
+        </li>
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../pages/gallery.html">Галерея изображений</a>
+        </li>
+
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../pages/contcts.html">Контакты</a>
+        </li>
+        <li class="header__navbar-item">
+          <a class="header__navbar-link" href="../pages/nav.html">Навигация</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="container">
+      <h1 class="main__title">Регистрация</h1>
+      <hr class="main__line">
+      <div class="container__form">
+        <form action="register.php" method="GET">
+          <fieldset class="">
+            <legend>Базовые поля ввода </legend>
+            <label class="label">Имя:
+              <input class="form-control" name="name" type="text" value="" minlength="3" maxlength="20"
+                placeholder="userName" required>
+            </label>
+            <label class="label">Фамилия:
+              <input class="form-control" name="surname" type="text" value="" minlength="3" maxlength="20"
+                placeholder="surName" required>
+            </label>
+            <label class="label">Отчество:
+              <input class="form-control" name="lastname" type="text" value="" minlength="3" maxlength="20"
+                placeholder="lastName" required>
+            </label>
+            <label class="label">Ваша фотография:
+              <input class="form-control" name="photo" type="file">
+            </label>
+            <label class="label">Адрес электронной почты:
+              <input class="form-control" name="mail" type="email" placeholder="Введите ваш Имейл" required>
+            </label>
+            <label class="label">Пароль:
+              <input class="form-control" name="passw" type="password" minlength="5" maxlength="10"
+                placeholder="Введите ваш пароль" required>
+            </label>
+            <label class="label">Адрес сайта
+              <input class="form-control" type="url" placeholder="mysite.name" name="site" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="radio">
+            <legend>Гендероное различие</legend>
+            <p class="label">Выберите ваш пол:</p>
+            <input class="form-control" id="male" type="radio" name="gender" value="male">
+            <label class="label-inline" for="male">Мужской</label>
+            <input class="form-control" id="female" type="radio" name="gender" value="female">
+            <label class="label-inline" for="female">Женский</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Дата рождения</legend>
+            <label class="label">Дата:
+              <input class="form-control" type="date" id="birthday" name="birthday"></label>
+          </fieldset>
+
+          <fieldset class="checkbox">
+            <legend>Ваши предпочтения</legend>
+            <p class="label">Выберите предпочитаемую кухню:</p>
+            <label class="label"><input class="form-control" checked name="ua" value="ukrainian"
+                type="checkbox">Украинская</label>
+            <label class="label"><input class="form-control" name="gr" value="georgian"
+                type="checkbox">Грузинская</label>
+            <label class="label"><input class="form-control" name="it" value="italian"
+                type="checkbox">Итальянская</label>
+            <label class="label"><input class="form-control" name="fr" value="french"
+                type="checkbox">Французская</label>
+            <label class="label"><input class="form-control" name="us" value="american"
+                type="checkbox">Американская</label>
+            <label class="label"><input class="form-control" name="jp" value="japanese" type="checkbox">Японская</label>
+            <label class="label"><input class="form-control" name="ch" value="chinese" type="checkbox">Китайская</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Дополнительня информация</legend>
+            <label class="label" for="txt">Информация о себе:</label>
+            <textarea placeholder="Введите информацию о себе..." name="txt" id="txt" cols="300" rows="10"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend> Управления формой</legend>
+            <button class="btn" type="submit">Зарегистрироваться</button>
+            <button class="btn" type="reset">Очистить форму</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-block">
+    <div class="footer-block__text">&copy;Angela Dmytrenko</div>
+    <ul class="footer__icon-list">
+      <li class="footer__icon-item"><a href="" class="footer__icon-link"><i class="fab fa-facebook-square"></i></a></li>
+      <li class="footer__icon-item"><a href="" class="footer__icon-link"><i class="fab fa-instagram-square"></i></a>
+      </li>
+      <li class="footer__icon-item"><a href="" class="footer__icon-link"><i class="fab fa-twitter-square"></i></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
