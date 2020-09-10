@@ -132,9 +132,9 @@ body{
 }
 .container__form{
   max-width: 900px;
-  margin: 0 auto;
-  padding-left:  30px;
-  padding-right: 30px;
+  margin: 30px auto;
+  /*padding-left:  30px;
+  padding-right: 30px;*/
 }
 /*----------------------------------------------------------*/
 /*Gallery*/
@@ -183,51 +183,64 @@ body{
 }
 /*----------------------------------------------------------*/
 /*form*/
-fieldset{
+fieldset {
   width: 500px;
   margin: 30px auto;
 }
-.form-control{
-  width: 100%;
-  padding: 7px 15px;
-}
-input[type="file"]{
+input[type="file"] {
   padding: 0;
 }
-input[type="password"]{
-  max-width: 300px;
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 75px;
+  max-height: 50vh;
 }
-/*Задание со звездочкой*/
-input[name="name"],
-input[name="surname" ],
-input[name="lastname"]{
-  text-transform: capitalize;
-}
-fieldset[class="checkbox"]:hover,
-fieldset[class="radio"]:hover{
-  border: 5px dashed #800000;
-}
-
-/*----------------------------------------------------------*/
 label,
-.label{
+.label {
   display: block;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-weight: 400;
   font-size: 0.8rem;
 }
-.label-inline{
-  display: inline-block;
-}
-.gender label:not(:last-of-type){
+.gender-group label:not(:last-of-type) {
   margin-right: 15px;
 }
-input[type="checkbox"],
-input[type="radio"]{
-  width: auto;
+.label-inline {
+  display: inline-block;
 }
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-control {
+  width: 100%;
+  padding: 7px 15px;
+}
+.btn {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  border: 1px solid #767676;
+  background-color: #efefef;
+  width: 100%;
+  padding: 7px 15px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/*задания со звездочкой*/
+
 input[type="email"]:focus{
   background-color: #808000;
+  color: #800000;
+  font-weight: bold;
 }
 .btn[type="submit"]:active{
   background-color: #008000 ;
@@ -235,26 +248,14 @@ input[type="email"]:focus{
 .btn[type="reset"]:active{
   background-color: red ;
 }
-textarea{
-  width: 100%;
-  resize: vertical;
-  min-height: 70px;
-  max-height: 50vh;
+input[name="name"],
+input[name="surname"],
+input[name="lastname"]{
+  text-transform: capitalize;
 }
-.btn{
-  display: block;
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid #000;
-  background-color: #efefef;
-  width: 100%;
-  padding: 7px 15px;
-  text-align: center;
-  font-weight: 300;
-  margin-top: 15px;
-  margin-bottom: 15px;
+fieldset[class="checkbox"]:hover,
+fieldset[class="radio"]:hover{
+  outline: 5px dashed #800000;
 }
 /*----------------------------------------------------------*/
 /*Navigation ссылки*/
